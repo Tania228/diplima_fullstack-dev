@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+backend/media/
+backend/staticfiles/
+backend/static/app/
+frontend/node_modules/
+.idea/
+.vscode/
+*.log
