@@ -243,12 +243,16 @@ Django создаст и затем удалит базу `test_mycloud`. Пол
 | `POSTGRES_PASSWORD` | пароль базы | `mycloud` |
 | `POSTGRES_HOST` | хост базы | `localhost` |
 | `POSTGRES_PORT` | порт базы | `5432` |
+| `DATABASE_ENGINE` | движок БД: `postgresql` или `sqlite` | `postgresql` |
+| `SQLITE_NAME` | путь к SQLite базе при `DATABASE_ENGINE=sqlite` | `backend/db.sqlite3` |
 | `STORAGE_ROOT` | каталог файлов на диске | `backend/media/storage` |
 | `MAX_UPLOAD_SIZE` | максимальный размер файла в байтах | `52428800` (50 МиБ) |
 
 На Linux переменные можно положить в файл и передать службе через `EnvironmentFile`. Имена в файле те же, без префикса `export`.
 
 ## Развёртывание на reg.ru
+
+Для бесплатной демонстрации есть отдельная инструкция [PythonAnywhere](deploy/pythonanywhere-free.md). Бесплатный Render не подходит для постоянного хранения файлов: его диск временный, а бесплатная PostgreSQL база удаляется через 30 дней.
 
 Ниже порядок для виртуального сервера с Ubuntu 22.04 или 24.04. Домен в примерах — `example.ru`, каталог — `/var/www/mycloud`. Подставьте свои значения.
 
